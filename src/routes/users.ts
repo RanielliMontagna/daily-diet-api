@@ -24,10 +24,8 @@ export async function usersRoutes(app: FastifyInstance) {
       return reply.status(400).send({ error: 'User already exists' })
     }
 
-    // Verificando se já existe uma sessionID
     let sessionId = request.cookies.sessionId
 
-    // Caso não exista, criar um
     if (!sessionId) {
       sessionId = randomUUID()
 
