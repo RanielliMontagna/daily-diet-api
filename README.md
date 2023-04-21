@@ -1,7 +1,5 @@
 # Daily Diet Api
 
-## 🚧 Status do Projeto - Em desenvolvimento 🚧
-
 ## 📖 Sobre
 
 O Daily Diet Api é uma API RESTful que tem como objetivo auxiliar no controle de dieta diária de um usuário.
@@ -33,6 +31,21 @@ O Daily Diet Api é uma API RESTful que tem como objetivo auxiliar no controle d
 - [Knex](http://knexjs.org/) - Um construtor de consultas SQL para Postgres, MSSQL, MySQL, MariaDB, SQLite3, Oracle, e Amazon Redshift.
 - [Sqlite3](https://www.sqlite.org/index.html) - Um banco de dados SQL embutido.
 - [Typescript](https://www.typescriptlang.org/) - Um superconjunto de JavaScript que adiciona tipagem estática e alguns outros recursos a linguagem.
+- [Zod](https://www.npmjs.com/package/zod) - Um esquema de validação de dados para TypeScript e JavaScript.
+- [Vitest](https://vitest.dev/) - Um framework de teste de unidade para Node.js e browsers.
+
+## 🛣️ Rotas
+
+| Método | Rota           | Descrição                           |
+|--------|----------------|-------------------------------------|
+| POST 📤   | /users         | Cria um novo usuário                |
+| GET 🔒    | /users/:me     | Retorna as informações do usuário   |
+| POST 📤   | /meals         | Cria uma nova refeição              |
+| GET 🔒    | /meals/:id     | Retorna uma refeição                |
+| GET 🔒    | /meals         | Retorna todas as refeições          |
+| PUT 📤   | /meals/:id     | Edita uma refeição                  |
+| DELETE 🗑️ | /meals/:id     | Apaga uma refeição                  |    
+| GET 🔒    | /meals/summary | Retorna o resumo das refeições      |
 
 ## 📦 Instalação
 
@@ -54,6 +67,25 @@ $ yarn dev ou npm run dev
 
 # O servidor inciará por padrão na porta:3333 - acesse http://localhost:3333
 ```
+
+
+## 🧪 Testes
+
+### 📋 Como executar os testes
+
+```bash
+# Execute os testes
+$ yarn test ou npm run test
+```
+### 🔬 Lista de testes
+
+- [x] Deve ser possível criar um usuário
+- [x] Deve ser possível buscar informações do usuário
+- [x] Deve ser possível criar uma refeição
+- [x] Deve ser possível buscar uma refeição
+- [x] Deve ser possível buscar todas as refeições
+- [x] Deve ser possível editar uma refeição
+- [x] Deve ser possível apagar uma refeição
 
 #### 🖊️ Autor - [@raniellimontagna](https://www.github.com/raniellimontagna)
 
