@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "aeda43a7-3a72-41d3-a307-1267d7a4c077",
+		"name": "Ignite Desafio 02 - Daily Diet API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21757044"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ranni\",\r\n    \"email\": \"raniellimontagna@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/users",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Me User Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/users/me",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "Create Meals",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Refeição 2\",\r\n    \"description\": \"Refeição 2\",\r\n    \"isOnTheDiet\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/meals",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Meal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Refeição 1\",\r\n    \"description\": \"Descrição legal ne\",\r\n    \"isOnTheDiet\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/meals/cf9779ee-10be-4176-977b-cc535f21cbd2",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals",
+								"cf9779ee-10be-4176-977b-cc535f21cbd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Meals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/meals",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/meals/cf9779ee-10be-4176-977b-cc535f21cbd2",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals",
+								"cf9779ee-10be-4176-977b-cc535f21cbd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/meals/f3956f62-3a05-4d60-8265-7bf428f792c7",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals",
+								"f3956f62-3a05-4d60-8265-7bf428f792c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/meals/summary",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"meals",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "http://localhost:3333",
+			"type": "string"
+		}
+	]
+}
